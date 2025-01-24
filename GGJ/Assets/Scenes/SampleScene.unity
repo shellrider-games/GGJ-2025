@@ -222,7 +222,7 @@ Transform:
   m_GameObject: {fileID: 252896378}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -299,7 +299,7 @@ Transform:
   m_GameObject: {fileID: 259190158}
   serializedVersion: 2
   m_LocalRotation: {x: 0.26239604, y: 0.36692443, z: -0.108688004, w: 0.8858339}
-  m_LocalPosition: {x: -5.930297, y: 5.446391, z: -5.930296}
+  m_LocalPosition: {x: -0.9302969, y: 5.446391, z: -0.93029594}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -485,7 +485,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.26239604, y: 0.36692443, z: -0.108688, w: 0.8858339}
-  m_LocalPosition: {x: -5.930297, y: 5.446391, z: -5.930296}
+  m_LocalPosition: {x: -0.9302969, y: 5.446391, z: -0.93029594}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -701,6 +701,7 @@ GameObject:
   - component: {fileID: 719786142}
   - component: {fileID: 719786145}
   - component: {fileID: 719786146}
+  - component: {fileID: 719786147}
   m_Layer: 0
   m_Name: CameraTarget
   m_TagString: Untagged
@@ -770,7 +771,7 @@ Transform:
   m_GameObject: {fileID: 719786140}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -907,13 +908,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11500000, guid: 73bd59c64b4454806a64834152ba99a6, type: 3}
-        m_TargetAssemblyTypeName: CameraMovement, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 719786147}
+        m_TargetAssemblyTypeName: PlaceObject, Assembly-CSharp
+        m_MethodName: OnMouseMovement
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -921,6 +922,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 822c606f-4012-4ef5-80a9-cffb6b8ce63b
     m_ActionName: 'CameraControl/MousePosition[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 719786147}
+        m_TargetAssemblyTypeName: PlaceObject, Assembly-CSharp
+        m_MethodName: OnPlaceObject
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 48e43d5f-de07-4836-8986-61a085e398d1
+    m_ActionName: 'CameraControl/PlaceObject[/Mouse/leftButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: CameraControl
@@ -939,6 +956,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
+--- !u!114 &719786147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719786140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bd59c64b4454806a64834152ba99a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToPlace: {fileID: 8658204550635881104, guid: d553e2c8f3b7f4af99aec9a78d82d997, type: 3}
+  theWorldPlane: {fileID: 252896379}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
