@@ -7,6 +7,8 @@ public class CameraMovement : MonoBehaviour
     private Vector2 keyboardDirection;
     private Vector2 mouseDirection;
     private bool useKeyboard = false;
+
+    [SerializeField][Range(0, 10)] private float speed;
     
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -19,9 +21,9 @@ public class CameraMovement : MonoBehaviour
         float rotatedX = direction.y * Degrees45 + direction.x * Degrees45;
         float rotatedY = direction.y * Degrees45 - direction.x * Degrees45;
         transform.position = new Vector3(
-            transform.position.x + rotatedX * Time.deltaTime, 
+            transform.position.x + rotatedX * Time.deltaTime * speed, 
             0, 
-            transform.position.z + rotatedY * Time.deltaTime
+            transform.position.z + rotatedY * Time.deltaTime * speed
         );
     }
 
