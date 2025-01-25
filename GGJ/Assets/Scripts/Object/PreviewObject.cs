@@ -42,4 +42,9 @@ public class PreviewObject : MonoBehaviour
     {
         return _previewObject.transform.rotation;
     }
+
+    public Vector3 GetPositionPreview()
+    {
+        return _previewObject.transform.position;
+    }
 }
