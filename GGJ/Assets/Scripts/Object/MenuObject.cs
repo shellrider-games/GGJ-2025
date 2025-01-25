@@ -4,9 +4,12 @@ using UnityEngine.InputSystem;
 
 public class MenuObject : MonoBehaviour
 {
+    public int value = 3;
+    
     [SerializeField] private GameObject canvas;
     private Vector2 _mousePosition;
     private Statemanager _statemanager;
+    private MoneyManager _moneyManager;
 
     private PlayerInput _playerInput;
     private InputAction _mouseMoveAction;
@@ -14,6 +17,7 @@ public class MenuObject : MonoBehaviour
     private Outline _outline;
     private void Start()
     {
+        _moneyManager = FindObjectOfType<MoneyManager>();
         _statemanager = FindObjectOfType<Statemanager>();
         canvas.SetActive(false);
         
@@ -53,6 +57,8 @@ public class MenuObject : MonoBehaviour
 
     public void SellObject()
     {
+        print("sell");
+        _moneyManager.AddMoney(value);
         Destroy(this.gameObject);
     }
     
