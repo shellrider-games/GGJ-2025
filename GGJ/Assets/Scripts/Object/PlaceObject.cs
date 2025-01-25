@@ -20,7 +20,7 @@ public class PlaceObject : MonoBehaviour
             if(theWorldPlane.Raycast(ray, out RaycastHit hit,100f))
             {
                 Vector3 hitPosition = hit.point;
-                Vector3 placePosition = new Vector3(Mathf.Round(hitPosition.x) + .5f, Mathf.Round(hitPosition.y), Mathf.Round(hitPosition.z) + .5f);
+                Vector3 placePosition = HelperFunctions.WorldPosToGrid(hitPosition);
                 Instantiate(objectToPlace, placePosition, Quaternion.identity).SetActive(true);
             }
         }
