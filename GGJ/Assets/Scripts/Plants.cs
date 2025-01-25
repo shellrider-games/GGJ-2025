@@ -1,14 +1,28 @@
+using System;
 using UnityEngine;
 
 public class Plants : MonoBehaviour
 {
-    [SerializeField] private Material startState;
-    [SerializeField] private Material endState;
-    [Range(0, 20)] public float growingSpeed;
+    [SerializeField] private GameObject startState;
+    [SerializeField] private GameObject endState;
+    [Range(0, 20)] public float growthTime;
+    
+    private float timer = 0f;
 
-    public void Growing()
+    public void Start()
     {
-        endState.SetColor("_Color", Color.red);
+        startState.SetActive(true);
+        endState.SetActive(false);
     }
 
+    public void Update()
+    {
+        timer += Time.deltaTime;
+
+        if (timer >= growthTime)
+        {
+            startState.SetActive(false);
+            endState.SetActive(true);
+        }
+    }
 }
