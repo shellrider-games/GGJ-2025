@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,11 +8,15 @@ public class PlaceObject : MonoBehaviour
     [SerializeField] private Collider theWorldPlane;
     private Vector2 mousePosition;
     private Statemanager _statemanager;
-    
+
+    private void Start()
+    {
+        _statemanager = GetComponent<Statemanager>();
+    }
+
     public void OnMouseMovement(InputAction.CallbackContext context)
     {
         mousePosition = context.ReadValue<Vector2>();
-        _statemanager = GetComponent<Statemanager>();
     }
 
     public void OnPlaceObject(InputAction.CallbackContext context)

@@ -57,7 +57,5 @@ public class CameraMovement : MonoBehaviour
             useKeyboard = false;
             mouseDirection.y = 1;
         }
-        
-        Debug.Log(mousePosition);
     }
 }
