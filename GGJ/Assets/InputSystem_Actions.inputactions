@@ -1023,15 +1023,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "DeleteObject",
-                    "type": "Button",
-                    "id": "fc9ed082-a7f9-4dae-adf1-22394372df89",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "RotateObject",
                     "type": "Value",
                     "id": "906d5568-5aaa-4c3c-825d-a45411a3722d",
@@ -1125,17 +1116,6 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "PlaceObject",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "48cff57b-357c-487f-8c97-b733563f9719",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "DeleteObject",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
