@@ -3,8 +3,12 @@ using UnityEngine.InputSystem;
 
 public class PlaceObject : MonoBehaviour
 {
+    public int cost = 5;
+    
     [SerializeField] private GameObject objectToPlace;
     [SerializeField] private Collider theWorldPlane;
+    [SerializeField] private MoneyManager moneyManager;
+    
     private Vector2 mousePosition;
     private Statemanager _statemanager;
 
@@ -31,17 +35,15 @@ public class PlaceObject : MonoBehaviour
 
                 Quaternion desiredRotation = gameObject.GetComponent<PreviewObject>().GetRotationPreview();
                 
-                if (!IsMouseOverObject(placePosition))
+                if (!IsMouseOverObject(placePosition) && moneyManager.RemoveMoney(cost))
                 {
-                    Instantiate(objectToPlace, placePosition, desiredRotation).SetActive(true);
-                }
-                else
-                {
-                    Debug.Log("Object already exists");
+                    if (moneyManager.RemoveMoney(cost))
+                    {
+                        Instantiate(objectToPlace, placePosition, desiredRotation).SetActive(true);
+                    }
+                    _statemanager.Idle();
                 }
             }
-            
-            _statemanager.Idle();
         }
     }
     

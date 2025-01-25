@@ -18,8 +18,6 @@ public class CanvasLookAtCameraObject : MonoBehaviour
         mouseMoveAction = _playerInput.actions["MousePosition"];
         moveAction.performed += LookAtCamera;
         mouseMoveAction.performed += LookAtCamera;
-        
-        print("test");
     }
 
     public void LookAtCamera(InputAction.CallbackContext context)

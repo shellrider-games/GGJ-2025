@@ -591,6 +591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 666f007461b614211864f3dde6f23994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 3
   canvas: {fileID: 5391378348382940952}
 --- !u!114 &5045884434236383785
 MonoBehaviour:
