@@ -991,7 +991,6 @@ GameObject:
   - component: {fileID: 719786145}
   - component: {fileID: 719786146}
   - component: {fileID: 719786147}
-  - component: {fileID: 719786148}
   - component: {fileID: 719786150}
   - component: {fileID: 719786151}
   m_Layer: 0
@@ -1212,18 +1211,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 719786148}
-        m_TargetAssemblyTypeName: DeleteObject, Assembly-CSharp
-        m_MethodName: OnMouseMovement
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 719786150}
         m_TargetAssemblyTypeName: PreviewObject, Assembly-CSharp
         m_MethodName: OnMouseMovement
@@ -1256,22 +1243,6 @@ MonoBehaviour:
     m_ActionName: 'CameraControl/PlaceObject[/Mouse/leftButton]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 719786148}
-        m_TargetAssemblyTypeName: DeleteObject, Assembly-CSharp
-        m_MethodName: OnDeleteObject
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: fc9ed082-a7f9-4dae-adf1-22394372df89
-    m_ActionName: CameraControl/New action
-  - m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: 719786150}
         m_TargetAssemblyTypeName: PreviewObject, Assembly-CSharp
         m_MethodName: OnRotateObject
@@ -1286,6 +1257,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 906d5568-5aaa-4c3c-825d-a45411a3722d
     m_ActionName: 'CameraControl/RotateObject[/Keyboard/r]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4201555f-28aa-46ab-99f1-893718f3b2ba
+    m_ActionName: 'CameraControl/ClickOnObject[/Mouse/leftButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: CameraControl
@@ -1317,20 +1292,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToPlace: {fileID: 8658204550635881104, guid: d553e2c8f3b7f4af99aec9a78d82d997, type: 3}
-  theWorldPlane: {fileID: 252896379}
---- !u!114 &719786148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 719786140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245d88b86d82427ebe200c0f70a074c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToDelete: {fileID: 0}
   theWorldPlane: {fileID: 252896379}
 --- !u!114 &719786150
 MonoBehaviour:
