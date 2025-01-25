@@ -703,7 +703,7 @@ GameObject:
   - component: {fileID: 719786146}
   - component: {fileID: 719786147}
   - component: {fileID: 719786148}
-  - component: {fileID: 719786149}
+  - component: {fileID: 719786150}
   m_Layer: 0
   m_Name: CameraTarget
   m_TagString: Untagged
@@ -934,6 +934,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 719786150}
+        m_TargetAssemblyTypeName: PreviewObject, Assembly-CSharp
+        m_MethodName: OnMouseMovement
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 822c606f-4012-4ef5-80a9-cffb6b8ce63b
     m_ActionName: 'CameraControl/MousePosition[/Mouse/position]'
   - m_PersistentCalls:
@@ -968,6 +980,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: fc9ed082-a7f9-4dae-adf1-22394372df89
     m_ActionName: CameraControl/New action
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 719786150}
+        m_TargetAssemblyTypeName: PreviewObject, Assembly-CSharp
+        m_MethodName: OnRotateObject
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 906d5568-5aaa-4c3c-825d-a45411a3722d
+    m_ActionName: 'CameraControl/RotateObject[/Keyboard/r]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: CameraControl
@@ -1014,7 +1042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToDelete: {fileID: 0}
   theWorldPlane: {fileID: 252896379}
---- !u!114 &719786149
+--- !u!114 &719786150
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1023,9 +1051,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 719786140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee75e518a32784587a73a1e199968ef6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7452ab6f32acf4ffaade147af7de0073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToPreview: {fileID: 8658204550635881104, guid: b78bd565ecc9644a5b9a039f4fd73646, type: 3}
+  theWorldPlane: {fileID: 252896379}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,7 +21,10 @@ public class PlaceObject : MonoBehaviour
             {
                 Vector3 hitPosition = hit.point;
                 Vector3 placePosition = HelperFunctions.WorldPosToGrid(hitPosition);
-                Instantiate(objectToPlace, placePosition, Quaternion.identity).SetActive(true);
+
+                Quaternion desiredRotation = gameObject.GetComponent<PreviewObject>().GetRotationPreview();
+
+                Instantiate(objectToPlace, placePosition, desiredRotation).SetActive(true);
             }
         }
     }

@@ -29,4 +29,17 @@ public class PreviewObject : MonoBehaviour
             _previewObject.transform.position = HelperFunctions.WorldPosToGrid(hit.point);
         }
     }
+
+    public void OnRotateObject(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Performed)
+        {
+            _previewObject.transform.Rotate(0, 90, 0);
+        }
+    }
+
+    public Quaternion GetRotationPreview()
+    {
+        return _previewObject.transform.rotation;
+    }
 }
