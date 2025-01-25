@@ -2,6 +2,12 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
+// How to use:
+// Instanciate Script and give following params:
+//  - ObjectToPreview: gameobject that represents the previewed object
+//  - theWorldPlane: the worldPlane of the game.
+// After Placing the Gameobject destory this Script.
 public class PreviewObject : MonoBehaviour
 {
     [SerializeField] private GameObject objectToPreview;
