@@ -1038,7 +1038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7452ab6f32acf4ffaade147af7de0073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToPreview: {fileID: 0}
+  objectToPreview: {fileID: 8658204550635881104, guid: b78bd565ecc9644a5b9a039f4fd73646, type: 3}
   theWorldPlane: {fileID: 252896379}
 --- !u!1 &832575517
 GameObject:
