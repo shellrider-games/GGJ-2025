@@ -1039,6 +1039,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "ClickOnObject",
+                    "type": "Button",
+                    "id": "4201555f-28aa-46ab-99f1-893718f3b2ba",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1138,6 +1147,17 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "RotateObject",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "864c502a-1e87-4d75-8869-f3a9a4c82571",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "ClickOnObject",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

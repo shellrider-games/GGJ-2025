@@ -5,9 +5,14 @@ public class PlaceObject : MonoBehaviour
 {
     [SerializeField] private GameObject objectToPlace;
     [SerializeField] private Collider theWorldPlane;
-    
     private Vector2 mousePosition;
-    public bool placeObject = true;
+    private Statemanager _statemanager;
+
+    private void Start()
+    {
+        _statemanager = GetComponent<Statemanager>();
+    }
+
     
     public void OnMouseMovement(InputAction.CallbackContext context)
     {
@@ -16,9 +21,8 @@ public class PlaceObject : MonoBehaviour
 
     public void OnPlaceObject(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Performed)
+        if (context.phase == InputActionPhase.Performed && _statemanager.CurrentState == "place")
         {
-            
             Ray ray = Camera.main.ScreenPointToRay(mousePosition);
             if(theWorldPlane.Raycast(ray, out RaycastHit hit,100f))
             {
@@ -36,6 +40,8 @@ public class PlaceObject : MonoBehaviour
                     Debug.Log("Object already exists");
                 }
             }
+            
+            _statemanager.Idle();
         }
     }
     

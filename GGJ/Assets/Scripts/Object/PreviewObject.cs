@@ -14,14 +14,23 @@ public class PreviewObject : MonoBehaviour
     [SerializeField] private Collider theWorldPlane;
 
     private GameObject _previewObject;
+    private Statemanager _statemanager;
     private void Start()
     {
         _previewObject = Instantiate(objectToPreview, Vector3.zero, Quaternion.identity);
-        _previewObject.SetActive(true);
+        _previewObject.SetActive(false);
+        _statemanager = GetComponent<Statemanager>();
     }
 
     public void OnMouseMovement(InputAction.CallbackContext context)
     {
+        if (_statemanager.CurrentState != "place")
+        {
+            _previewObject.SetActive(false);
+            return;
+        }
+        
+        _previewObject.SetActive(true);
         Vector2 mousePosition = context.ReadValue<Vector2>();
         Ray ray = Camera.main.ScreenPointToRay(mousePosition);
         if (theWorldPlane.Raycast(ray, out RaycastHit hit, 100f))
