@@ -34,6 +34,9 @@ public class MenuObject : MonoBehaviour
     
     public void OnClickOnObject(InputAction.CallbackContext context)
     {
+        _outline.enabled = false;
+        canvas.SetActive(false);
+        
         if (context.phase == InputActionPhase.Performed && _statemanager.CurrentState == "idle")
         {
             Ray ray = Camera.main.ScreenPointToRay(_mousePosition);
@@ -43,10 +46,7 @@ public class MenuObject : MonoBehaviour
                 {
                     _outline.enabled = true;
                     canvas.SetActive(true);
-                    return;
                 }
-                _outline.enabled = false;
-                canvas.SetActive(false);
             }
         }
     }
