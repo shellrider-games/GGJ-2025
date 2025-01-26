@@ -35,7 +35,6 @@ public class CollectPlant : MonoBehaviour
     
     public void OnClickOnObject(InputAction.CallbackContext context)
     {
-        
         if (context.phase == InputActionPhase.Performed && _statemanager.CurrentState == "idle")
         {
             Ray ray = Camera.main.ScreenPointToRay(_mousePosition);
