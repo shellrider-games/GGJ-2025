@@ -8,6 +8,7 @@ public class SellSound : MonoBehaviour
 
     private void Start()
     {
-        AudioSource.PlayClipAtPoint(sellSound, transform.position);
+        if (sellSound != null)
+            AudioSource.PlayClipAtPoint(sellSound, transform.position);
     }
 }

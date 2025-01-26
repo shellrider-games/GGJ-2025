@@ -8,6 +8,7 @@ public class PlanterPlaceSound : MonoBehaviour
 
     private void Start()
     {
-        AudioSource.PlayClipAtPoint(planterPlaceSound, transform.position);
+        if (planterPlaceSound != null)
+            AudioSource.PlayClipAtPoint(planterPlaceSound, transform.position);
     }
 }

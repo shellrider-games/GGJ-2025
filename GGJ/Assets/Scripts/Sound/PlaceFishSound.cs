@@ -8,6 +8,7 @@ public class FishPlaceSound : MonoBehaviour
 
     private void Start()
     {
-        AudioSource.PlayClipAtPoint(fishPlaceSounds[Random.Range(0, fishPlaceSounds.Count)], transform.position);
+        if (fishPlaceSounds != null)
+            AudioSource.PlayClipAtPoint(fishPlaceSounds[Random.Range(0, fishPlaceSounds.Count)], transform.position);
     }
 }

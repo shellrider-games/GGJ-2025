@@ -8,6 +8,7 @@ public class ButtonClickSound : MonoBehaviour
 
     private void Start()
     {
-        AudioSource.PlayClipAtPoint(buttonClick, transform.position);
+        if (buttonClick != null)
+            AudioSource.PlayClipAtPoint(buttonClick, transform.position);
     }
 }

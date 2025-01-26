@@ -10,6 +10,7 @@ public class MoneyManager : MonoBehaviour
     {
         _moneyField = GameObject.Find("MoneyField").GetComponent<TextMeshProUGUI>();
         _moneyField.SetText("Money: "+Money);
+        CollectPlant.collectedPlant += () => { AddMoney(1); };
     }
 
     public void AddMoney(int money)

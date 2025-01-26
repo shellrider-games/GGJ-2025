@@ -7,6 +7,7 @@ public class RemovePlanterSound : MonoBehaviour
 
     private void Start()
     {
-        AudioSource.PlayClipAtPoint(planterRemoveSound, transform.position);
+        if (planterRemoveSound != null)
+            AudioSource.PlayClipAtPoint(planterRemoveSound, transform.position);
     }
 }
