@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4559068531967795055}
   - component: {fileID: 121537986952352939}
   - component: {fileID: 3194586054353383573}
+  - component: {fileID: 3101122772266668627}
   m_Layer: 0
   m_Name: Sell
   m_TagString: Untagged
@@ -133,6 +134,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3101122772266668627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720315071786791569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b26aa612eb61424ba25d0c8ea233efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sellSound: {fileID: 8300000, guid: 38c73ee560d359d4f933fdc3829968d2, type: 3}
 --- !u!1 &4694856945237837959
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,6 +420,8 @@ GameObject:
   - component: {fileID: 1858773407513213360}
   - component: {fileID: 5168675921143097456}
   - component: {fileID: 5045884434236383785}
+  - component: {fileID: 6858303395198016958}
+  - component: {fileID: 5208358543337466901}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: PlacedObject
@@ -500,6 +516,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 5391378348382940952}
+--- !u!114 &6858303395198016958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8658204550635881104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47bec81d1a9c714ab2c28efc76923ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planterPlaceSound: {fileID: 8300000, guid: a1e263594ebe56b45b41ba79aa46f33e, type: 3}
+--- !u!114 &5208358543337466901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8658204550635881104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c8620fb8ef1d540a02eb63e6774a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planterRemoveSound: {fileID: 8300000, guid: 73589e0056b63f44e97fed65ec7a0cc4, type: 3}
 --- !u!1 &9189968571564805025
 GameObject:
   m_ObjectHideFlags: 0

@@ -46,9 +46,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dfee4a01ac1445f18b7f45f54023bbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plantSounds:
+  - {fileID: 8300000, guid: 3b1a76a44dc8d564693af10911aa7b48, type: 3}
+  - {fileID: 8300000, guid: d44399a1f10c79141aa7ad1ab67b21cf, type: 3}
   startState: {fileID: 2547413903492197835}
   endState: {fileID: 612289757752692971}
   growthTime: 5
+  randomizeGrowthTime: 3
 --- !u!1001 &1218501446673425031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61,10 +65,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndPlant
       objectReference: {fileID: 0}
-    - target: {fileID: 3277788319887007647, guid: 95cdd48bbc7b74e1a8554e891c3b5d95, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 9f487b63059ba4621904efa63a4ca9cd, type: 2}
     - target: {fileID: 7671200284067679456, guid: 95cdd48bbc7b74e1a8554e891c3b5d95, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -105,6 +105,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7757237320556202283, guid: 95cdd48bbc7b74e1a8554e891c3b5d95, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 3989264768387625552}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
