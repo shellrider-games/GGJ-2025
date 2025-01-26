@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 public class CollectPlant : MonoBehaviour
 {
     [SerializeField] private GameObject parent;
+    [SerializeField] private AudioClip sellSound;
+
     [Range(0f, 10f)] public int value=1;
     
     private PlayerInput _playerInput;
@@ -42,6 +44,9 @@ public class CollectPlant : MonoBehaviour
             {
                 if (hit.collider.gameObject == this.gameObject)
                 {
+                    //sound
+                    AudioSource.PlayClipAtPoint(sellSound, transform.position);
+
                     _moneyManager.AddMoney(value);
                     Instantiate(parent).transform.position = parent.transform.position;
                     Destroy(parent);

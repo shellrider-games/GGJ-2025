@@ -7,6 +7,10 @@ public class MenuObject : MonoBehaviour
     public int value = 3;
     
     [SerializeField] private GameObject canvas;
+    [SerializeField] private AudioClip selectPlanter;
+    [SerializeField] private AudioClip sell;
+
+
     private Vector2 _mousePosition;
     private Statemanager _statemanager;
     private MoneyManager _moneyManager;
@@ -15,8 +19,6 @@ public class MenuObject : MonoBehaviour
     private InputAction _mouseMoveAction;
     private InputAction _clickObjectAction;
     private Outline _outline;
-
-    private bool isMoving = false;
     private void Start()
     {
         _moneyManager = FindObjectOfType<MoneyManager>();
@@ -53,6 +55,9 @@ public class MenuObject : MonoBehaviour
             {
                 if (hit.collider.gameObject == this.gameObject || hit.collider.gameObject == canvas)
                 {
+                    
+                    AudioSource.PlayClipAtPoint(selectPlanter, transform.position);
+                    
                     _outline.enabled = true;
                     canvas.SetActive(true);
                     return;
@@ -65,6 +70,9 @@ public class MenuObject : MonoBehaviour
 
     public void SellObject()
     {
+        //sell sound
+        AudioSource.PlayClipAtPoint(sell, transform.position);
+        
         print("sell");
         _moneyManager.AddMoney(value);
         Destroy(this.gameObject);
@@ -76,25 +84,6 @@ public class MenuObject : MonoBehaviour
         {
             _mouseMoveAction.performed -= OnMouseMovement;
             _clickObjectAction.performed -= OnClickOnObject;
-        }
-    }
-
-    public void MoveObject()
-    {
-        isMoving = true;
-        canvas.SetActive(false);
-        _outline.enabled = true;
-    }
-
-    private void Update()
-    {
-        if (isMoving)
-        {
-            Ray ray = Camera.main.ScreenPointToRay(_mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hit, 100f))
-            {
-                transform.position = hit.point;
-            }
         }
     }
 }
