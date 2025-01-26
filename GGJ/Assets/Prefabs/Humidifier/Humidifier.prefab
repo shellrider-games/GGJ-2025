@@ -34,7 +34,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 9113243246666054405}
+  - {fileID: 8799211282063860819}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6340278739272869352
@@ -5052,3 +5052,65 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &5207574583027996491
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3871347500450255770}
+    m_Modifications:
+    - target: {fileID: 3627668691803058968, guid: a8ec21a22c40c45b7a922fe63cef4f11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627668691803058968, guid: a8ec21a22c40c45b7a922fe63cef4f11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627668691803058968, guid: a8ec21a22c40c45b7a922fe63cef4f11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627668691803058968, guid: a8ec21a22c40c45b7a922fe63cef4f11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627668691803058968, guid: a8ec21a22c40c45b7a922fe63cef4f11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627668691803058968, guid: a8ec21a22c40c45b7a922fe63cef4f11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627668691803058968, guid: a8ec21a22c40c45b7a922fe63cef4f11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627668691803058968, guid: a8ec21a22c40c45b7a922fe63cef4f11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627668691803058968, guid: a8ec21a22c40c45b7a922fe63cef4f11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627668691803058968, guid: a8ec21a22c40c45b7a922fe63cef4f11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112844021985601954, guid: a8ec21a22c40c45b7a922fe63cef4f11, type: 3}
+      propertyPath: m_Name
+      value: humidifier
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a8ec21a22c40c45b7a922fe63cef4f11, type: 3}
+--- !u!4 &8799211282063860819 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3627668691803058968, guid: a8ec21a22c40c45b7a922fe63cef4f11, type: 3}
+  m_PrefabInstance: {fileID: 5207574583027996491}
+  m_PrefabAsset: {fileID: 0}
