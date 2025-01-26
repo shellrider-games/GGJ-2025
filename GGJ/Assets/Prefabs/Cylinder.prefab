@@ -691,7 +691,6 @@ GameObject:
   - component: {fileID: 5168675921143097456}
   - component: {fileID: 5045884434236383785}
   - component: {fileID: 6858303395198016958}
-  - component: {fileID: 5208358543337466901}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: PlacedObject
@@ -773,6 +772,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 3
   canvas: {fileID: 5391378348382940952}
+  selectPlanter: {fileID: 8300000, guid: 108d42b545c09084a8f86430cda79547, type: 3}
+  buttonClick: {fileID: 8300000, guid: 38c73ee560d359d4f933fdc3829968d2, type: 3}
 --- !u!114 &5045884434236383785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -799,19 +800,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planterPlaceSound: {fileID: 8300000, guid: a1e263594ebe56b45b41ba79aa46f33e, type: 3}
---- !u!114 &5208358543337466901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8658204550635881104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8c8620fb8ef1d540a02eb63e6774a1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  planterRemoveSound: {fileID: 8300000, guid: 73589e0056b63f44e97fed65ec7a0cc4, type: 3}
 --- !u!1 &9189968571564805025
 GameObject:
   m_ObjectHideFlags: 0

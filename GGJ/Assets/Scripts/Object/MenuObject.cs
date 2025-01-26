@@ -7,6 +7,10 @@ public class MenuObject : MonoBehaviour
     public int value = 3;
     
     [SerializeField] private GameObject canvas;
+    [SerializeField] private AudioClip selectPlanter;
+    [SerializeField] private AudioClip sell;
+
+
     private Vector2 _mousePosition;
     private Statemanager _statemanager;
     private MoneyManager _moneyManager;
@@ -42,7 +46,6 @@ public class MenuObject : MonoBehaviour
     {
         
         
-        
         if (isMoving && context.phase == InputActionPhase.Performed)
         {
             isMoving = false;
@@ -56,6 +59,9 @@ public class MenuObject : MonoBehaviour
             {
                 if (hit.collider.gameObject == this.gameObject || hit.collider.gameObject == canvas)
                 {
+                    
+                    AudioSource.PlayClipAtPoint(selectPlanter, transform.position);
+                    
                     _outline.enabled = true;
                     canvas.SetActive(true);
                     return;
@@ -68,6 +74,9 @@ public class MenuObject : MonoBehaviour
 
     public void SellObject()
     {
+        //sell sound
+        AudioSource.PlayClipAtPoint(sell, transform.position);
+        
         print("sell");
         _moneyManager.AddMoney(value);
         Destroy(this.gameObject);
@@ -84,6 +93,9 @@ public class MenuObject : MonoBehaviour
 
     public void MoveObject()
     {
+        //ButtonClick Sound
+        AudioSource.PlayClipAtPoint(buttonClick, transform.position);
+        
         isMoving = true;
         canvas.SetActive(false);
         _outline.enabled = true;

@@ -122,4 +122,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
+  sellSound: {fileID: 8300000, guid: 38c73ee560d359d4f933fdc3829968d2, type: 3}
   value: 1
