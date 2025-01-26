@@ -51,8 +51,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d44399a1f10c79141aa7ad1ab67b21cf, type: 3}
   startState: {fileID: 2547413903492197835}
   endState: {fileID: 612289757752692971}
-  growthTime: 5
-  randomizeGrowthTime: 3
+  humidifier: {fileID: 8550307311256415170, guid: c97977fc8319b42b8a964439deea5360, type: 3}
+  baseGrowthTime: 5
+  randomizeGrowthTime: 10
+  proximityThreshold: 3
 --- !u!1001 &1218501446673425031
 PrefabInstance:
   m_ObjectHideFlags: 0
