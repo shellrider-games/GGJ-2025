@@ -40,15 +40,14 @@ public class MenuObject : MonoBehaviour
     
     public void OnClickOnObject(InputAction.CallbackContext context)
     {
+        
+        
+        
         if (isMoving && context.phase == InputActionPhase.Performed)
         {
             isMoving = false;
-            _outline.enabled = false;
-            canvas.SetActive(false);
             return;
         }
-        // _outline.enabled = false;
-        // canvas.SetActive(false);
         
         if (context.phase == InputActionPhase.Performed && _statemanager.CurrentState == "idle")
         {
@@ -59,7 +58,10 @@ public class MenuObject : MonoBehaviour
                 {
                     _outline.enabled = true;
                     canvas.SetActive(true);
+                    return;
                 }
+                _outline.enabled = false;
+                canvas.SetActive(false);
             }
         }
     }
