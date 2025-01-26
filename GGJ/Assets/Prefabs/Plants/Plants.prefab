@@ -46,6 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dfee4a01ac1445f18b7f45f54023bbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plantSounds:
+  - {fileID: 8300000, guid: 3b1a76a44dc8d564693af10911aa7b48, type: 3}
+  - {fileID: 8300000, guid: d44399a1f10c79141aa7ad1ab67b21cf, type: 3}
   startState: {fileID: 2547413903492197835}
   endState: {fileID: 612289757752692971}
   growthTime: 5
