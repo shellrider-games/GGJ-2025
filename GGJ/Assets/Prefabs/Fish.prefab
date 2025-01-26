@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4987203748633941932}
   - component: {fileID: 9129007223604897762}
+  - component: {fileID: 6332431941203385100}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Untagged
@@ -51,6 +52,21 @@ MonoBehaviour:
   WaitTime: 3
   WaitTimeVariance: 0.5
   Animator: {fileID: 4686034088702751939}
+--- !u!114 &6332431941203385100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8460056921461452800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce801089783470e4b9d5425e7d982f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishPlaceSounds:
+  - {fileID: 8300000, guid: 150d9a68ca378604c9c36fdb45c407eb, type: 3}
+  - {fileID: 8300000, guid: 5d8e791c55dbbaa4ebfdad094e643dd8, type: 3}
 --- !u!1001 &326901783669038129
 PrefabInstance:
   m_ObjectHideFlags: 0
