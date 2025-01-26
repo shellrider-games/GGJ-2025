@@ -27,27 +27,32 @@ public class PlaceObject : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Performed && _statemanager.CurrentState == "place")
         {
-            Ray ray = Camera.main.ScreenPointToRay(mousePosition);
-            if(theWorldPlane.Raycast(ray, out RaycastHit hit,100f))
-            {
-                Vector3 hitPosition = hit.point;
-                Vector3 placePosition = HelperFunctions.WorldPosToGrid(hitPosition);
+            Place();
+        }
+    }
 
-                Quaternion desiredRotation = gameObject.GetComponent<PreviewObject>().GetRotationPreview();
+    public void Place()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(mousePosition);
+        if(theWorldPlane.Raycast(ray, out RaycastHit hit,100f))
+        {
+            Vector3 hitPosition = hit.point;
+            Vector3 placePosition = HelperFunctions.WorldPosToGrid(hitPosition);
+
+            Quaternion desiredRotation = gameObject.GetComponent<PreviewObject>().GetRotationPreview();
                 
-                if (!IsMouseOverObject(placePosition))
+            if (!IsMouseOverObject(placePosition))
+            {
+                if (moneyManager.RemoveMoney(cost))
                 {
-                    if (moneyManager.RemoveMoney(cost))
-                    {
-                        Instantiate(objectToPlace, placePosition, desiredRotation).SetActive(true);
-                    }
-                    _statemanager.Idle();
+                    Instantiate(objectToPlace, placePosition, desiredRotation).SetActive(true);
                 }
+                _statemanager.Idle();
             }
         }
     }
-    
-    private bool IsMouseOverObject(Vector3 placePosition)
+
+    public bool IsMouseOverObject(Vector3 placePosition)
     {
         Collider[] colliders = Physics.OverlapSphere(placePosition, 0.1f);
         foreach (Collider collider in colliders)
