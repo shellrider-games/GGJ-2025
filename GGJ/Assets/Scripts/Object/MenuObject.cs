@@ -19,8 +19,6 @@ public class MenuObject : MonoBehaviour
     private InputAction _mouseMoveAction;
     private InputAction _clickObjectAction;
     private Outline _outline;
-
-    private bool isMoving = false;
     private void Start()
     {
         _moneyManager = FindObjectOfType<MoneyManager>();
@@ -44,14 +42,6 @@ public class MenuObject : MonoBehaviour
     
     public void OnClickOnObject(InputAction.CallbackContext context)
     {
-        
-        
-        if (isMoving && context.phase == InputActionPhase.Performed)
-        {
-            isMoving = false;
-            return;
-        }
-        
         if (context.phase == InputActionPhase.Performed && _statemanager.CurrentState == "idle")
         {
             Ray ray = Camera.main.ScreenPointToRay(_mousePosition);
@@ -88,28 +78,6 @@ public class MenuObject : MonoBehaviour
         {
             _mouseMoveAction.performed -= OnMouseMovement;
             _clickObjectAction.performed -= OnClickOnObject;
-        }
-    }
-
-    public void MoveObject()
-    {
-        //ButtonClick Sound
-        AudioSource.PlayClipAtPoint(buttonClick, transform.position);
-        
-        isMoving = true;
-        canvas.SetActive(false);
-        _outline.enabled = true;
-    }
-
-    private void Update()
-    {
-        if (isMoving)
-        {
-            Ray ray = Camera.main.ScreenPointToRay(_mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hit, 100f))
-            {
-                transform.position = hit.point;
-            }
         }
     }
 }
