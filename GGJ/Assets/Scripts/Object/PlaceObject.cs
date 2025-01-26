@@ -46,8 +46,6 @@ public class PlaceObject : MonoBehaviour
             {
                 if (moneyManager.RemoveMoney(cost))
                 {
-                    if (moneyManager.RemoveMoney(cost))
-                    {
                         if (_statemanager.CurrentState == "place")
                         {
                             Instantiate(objectToPlace, placePosition, desiredRotation).SetActive(true);
@@ -58,8 +56,6 @@ public class PlaceObject : MonoBehaviour
                         }
                     }
                     _statemanager.Idle();
-                }
-                _statemanager.Idle();
             }
         }
     }

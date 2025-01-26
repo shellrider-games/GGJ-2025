@@ -15,6 +15,7 @@ public class Statemanager : MonoBehaviour
 
     public void PlaceHumidifier()
     {
+        AudioSource.PlayClipAtPoint(buttonClick, transform.position);
         CurrentState = "humidifier";
     }
 
