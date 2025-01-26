@@ -120,7 +120,6 @@ GameObject:
   - component: {fileID: 6340278739272869352}
   - component: {fileID: 2205339882721265603}
   - component: {fileID: 5710138821904787677}
-  - component: {fileID: 5372723292670804830}
   - component: {fileID: 3279360994795653934}
   - component: {fileID: 2337462279919105741}
   m_Layer: 0
@@ -162,10 +161,11 @@ MonoBehaviour:
   humidifierSound1: {fileID: 3279360994795653934}
   humidifierSound2: {fileID: 2337462279919105741}
   humidifierSounds:
-  - {fileID: 8300000, guid: bb58c5e9671154845ab250fb4023f661, type: 3}
-  - {fileID: 8300000, guid: bb58c5e9671154845ab250fb4023f661, type: 3}
-  crossfadeDuration: 2
-  volume: 1
+  - {fileID: 8300000, guid: 855e8ef7427da51449488745d494ed4e, type: 3}
+  - {fileID: 8300000, guid: 3525823fbc7ec6544832939b18dc499c, type: 3}
+  - {fileID: 8300000, guid: 083c4e8896ad7ad428b409f2d5a591e6, type: 3}
+  crossfadeDuration: 0.5
+  volume: 0.029
 --- !u!199 &2205339882721265603
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -4966,24 +4966,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!114 &5372723292670804830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8550307311256415170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ac6e5106e4407a438c417ccc0636cce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  humidifierPlaceSound: {fileID: 0}
-  humidifierSound1: {fileID: 0}
-  humidifierSound2: {fileID: 0}
-  humidifierSounds: []
-  crossfadeDuration: 2
-  volume: 1
 --- !u!82 &3279360994795653934
 AudioSource:
   m_ObjectHideFlags: 0

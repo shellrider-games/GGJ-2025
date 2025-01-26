@@ -18,7 +18,8 @@ public class PlaceHumidifierSound : MonoBehaviour
  
     void Start()
     {
-        AudioSource.PlayClipAtPoint(humidifierPlaceSound, transform.position);
+        if(humidifierPlaceSound != null)
+            AudioSource.PlayClipAtPoint(humidifierPlaceSound, transform.position);
         // Ensure AudioSources are properly initialized
         humidifierSound1.volume = volume;
         humidifierSound2.volume = 0f;
