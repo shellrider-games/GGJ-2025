@@ -1163,7 +1163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 5
   objectToPlace: {fileID: 8658204550635881104, guid: d553e2c8f3b7f4af99aec9a78d82d997, type: 3}
-  humidifier: {fileID: 0}
+  humidifier: {fileID: 8550307311256415170, guid: c97977fc8319b42b8a964439deea5360, type: 3}
   theWorldPlane: {fileID: 252896379}
   moneyManager: {fileID: 719786152}
 --- !u!114 &719786150
@@ -1179,7 +1179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToPreview: {fileID: 8658204550635881104, guid: b78bd565ecc9644a5b9a039f4fd73646, type: 3}
-  humidifer: {fileID: 0}
+  humidifer: {fileID: 8550307311256415170, guid: ae4c04359b5b74315a3e56a84eb78996, type: 3}
   theWorldPlane: {fileID: 252896379}
 --- !u!114 &719786151
 MonoBehaviour:
@@ -1193,7 +1193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d512483aefda949e1a69a9322aa5af1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonClick: {fileID: 0}
+  buttonClick: {fileID: 8300000, guid: bc001bd6e2c54d54b92b715a630cbf99, type: 3}
 --- !u!114 &719786152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6266,6 +6266,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1979466620029376927, guid: 4995a40af63b84e5fa11bd2451578a4a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 719786151}
     - target: {fileID: 2154368814611472184, guid: 4995a40af63b84e5fa11bd2451578a4a, type: 3}
       propertyPath: m_Name
       value: UI
@@ -6314,10 +6318,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 719786151}
-    - target: {fileID: 5582630141231029818, guid: 4995a40af63b84e5fa11bd2451578a4a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Place
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
