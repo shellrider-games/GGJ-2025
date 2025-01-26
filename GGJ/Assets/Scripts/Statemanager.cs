@@ -10,6 +10,11 @@ public class Statemanager : MonoBehaviour
         CurrentState = "place";
     }
 
+    public void PlaceHumidifier()
+    {
+        CurrentState = "humidifier";
+    }
+
     public void Edit()
     {
         CurrentState = "edit";

@@ -6,6 +6,7 @@ public class PlaceObject : MonoBehaviour
     public int cost = 5;
     
     [SerializeField] private GameObject objectToPlace;
+    [SerializeField] private GameObject humidifier;
     [SerializeField] private Collider theWorldPlane;
     [SerializeField] private MoneyManager moneyManager;
     
@@ -25,7 +26,7 @@ public class PlaceObject : MonoBehaviour
 
     public void OnPlaceObject(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Performed && _statemanager.CurrentState == "place")
+        if (context.phase == InputActionPhase.Performed && (_statemanager.CurrentState == "place" || _statemanager.CurrentState == "humidifier"))
         {
             Ray ray = Camera.main.ScreenPointToRay(mousePosition);
             if(theWorldPlane.Raycast(ray, out RaycastHit hit,100f))
@@ -39,7 +40,14 @@ public class PlaceObject : MonoBehaviour
                 {
                     if (moneyManager.RemoveMoney(cost))
                     {
-                        Instantiate(objectToPlace, placePosition, desiredRotation).SetActive(true);
+                        if (_statemanager.CurrentState == "place")
+                        {
+                            Instantiate(objectToPlace, placePosition, desiredRotation).SetActive(true);
+                        }
+                        else if(_statemanager.CurrentState == "humidifier")
+                        {
+                            Instantiate(humidifier, placePosition, desiredRotation).SetActive(true);
+                        }
                     }
                     _statemanager.Idle();
                 }

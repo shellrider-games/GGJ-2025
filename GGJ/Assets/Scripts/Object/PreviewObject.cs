@@ -11,31 +11,54 @@ using UnityEngine.InputSystem;
 public class PreviewObject : MonoBehaviour
 {
     [SerializeField] private GameObject objectToPreview;
+    [SerializeField] private GameObject humidifer;
     [SerializeField] private Collider theWorldPlane;
 
     private GameObject _previewObject;
+    private GameObject _previewHumidifer;
     private Statemanager _statemanager;
     private void Start()
     {
         _previewObject = Instantiate(objectToPreview, Vector3.zero, Quaternion.identity);
         _previewObject.SetActive(false);
+        
+        _previewHumidifer = Instantiate(humidifer, Vector3.zero, Quaternion.identity);
+        _previewHumidifer.SetActive(false);
+        
         _statemanager = GetComponent<Statemanager>();
     }
 
     public void OnMouseMovement(InputAction.CallbackContext context)
     {
-        if (_statemanager.CurrentState != "place")
+        if (_statemanager.CurrentState != "place" && _statemanager.CurrentState != "humidifier")
         {
             _previewObject.SetActive(false);
+            _previewHumidifer.SetActive(false);
             return;
         }
+
         
-        _previewObject.SetActive(true);
-        Vector2 mousePosition = context.ReadValue<Vector2>();
-        Ray ray = Camera.main.ScreenPointToRay(mousePosition);
-        if (theWorldPlane.Raycast(ray, out RaycastHit hit, 100f))
+        if (_statemanager.CurrentState == "place")
         {
-            _previewObject.transform.position = HelperFunctions.WorldPosToGrid(hit.point);
+            _previewObject.SetActive(true);
+            _previewHumidifer.SetActive(false);
+            Vector2 mousePosition = context.ReadValue<Vector2>();
+            Ray ray = Camera.main.ScreenPointToRay(mousePosition);
+            if (theWorldPlane.Raycast(ray, out RaycastHit hit, 100f))
+            {
+                _previewObject.transform.position = HelperFunctions.WorldPosToGrid(hit.point);
+            }
+        }else if (_statemanager.CurrentState == "humidifier")
+        {
+            print("test");
+            _previewObject.SetActive(false);
+            _previewHumidifer.SetActive(true);
+            Vector2 mousePosition = context.ReadValue<Vector2>();
+            Ray ray = Camera.main.ScreenPointToRay(mousePosition);
+            if (theWorldPlane.Raycast(ray, out RaycastHit hit, 100f))
+            {
+                _previewHumidifer.transform.position = HelperFunctions.WorldPosToGrid(hit.point);
+            }
         }
     }
 
