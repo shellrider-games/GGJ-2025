@@ -11,7 +11,7 @@ public class PlaceObject : MonoBehaviour
     
     private Vector2 mousePosition;
     private Statemanager _statemanager;
-
+ 
     private void Start()
     {
         _statemanager = GetComponent<Statemanager>();
@@ -35,7 +35,7 @@ public class PlaceObject : MonoBehaviour
 
                 Quaternion desiredRotation = gameObject.GetComponent<PreviewObject>().GetRotationPreview();
                 
-                if (!IsMouseOverObject(placePosition) && moneyManager.RemoveMoney(cost))
+                if (!IsMouseOverObject(placePosition))
                 {
                     if (moneyManager.RemoveMoney(cost))
                     {
