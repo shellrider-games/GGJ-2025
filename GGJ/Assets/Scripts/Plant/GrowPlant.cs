@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 public class GrowPlant : MonoBehaviour
 {
@@ -10,15 +12,21 @@ public class GrowPlant : MonoBehaviour
     [SerializeField] private GameObject endState;
     [Range(0f, 50f)] public float growthTime;
     [Range(0f, 20f)] public float randomizeGrowthTime=3f;
+
+    private Coroutine growingCoroutine;
     
     
     private void Start()
     {
+        Reset();
+    }
+
+    public void Reset()
+    {
+        StopAllCoroutines();
         startState.SetActive(true);
         endState.SetActive(false);
-
-        // Start the growth coroutine
-        StartCoroutine(StartGrowPlant());
+        growingCoroutine = StartCoroutine(StartGrowPlant());
     }
 
     private IEnumerator StartGrowPlant()

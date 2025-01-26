@@ -503,7 +503,7 @@ MonoBehaviour:
   value: 3
   canvas: {fileID: 5391378348382940952}
   selectPlanter: {fileID: 8300000, guid: 108d42b545c09084a8f86430cda79547, type: 3}
-  buttonClick: {fileID: 8300000, guid: 38c73ee560d359d4f933fdc3829968d2, type: 3}
+  sell: {fileID: 0}
 --- !u!114 &5045884434236383785
 MonoBehaviour:
   m_ObjectHideFlags: 0
